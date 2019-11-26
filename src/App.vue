@@ -1,18 +1,13 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <Component2 msg="Welcome from NPM Component2"/>
   </div>
 </template>
 
 <script>
-import Component2 from './components/Component2.vue'
 
 export default {
   name: 'app',
-  components: {
-    Component2
-  }
 }
 </script>
 

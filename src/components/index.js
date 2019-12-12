@@ -1,10 +1,21 @@
 import Vue from 'vue';
 import MnAlert from './MnAlert.vue';
 import MnModal from './MnModal.vue';
+import MnActionModal from './MnActionModal.vue';
+import MnContextModal from './MnContextModal.vue';
+import MnLoadSpinner from './MnLoadSpinner.vue';
+import MnTab from './MnTab.vue';
+import MnTabs from './MnTabs.vue';
+
 
 const Components = {
     MnAlert,
-    MnModal
+    MnModal,
+    MnActionModal,
+    MnContextModal,
+    MnLoadSpinner,
+    MnTab,
+    MnTabs
 };
 
 Object.keys(Components).forEach(name => {

@@ -36,7 +36,6 @@
 
 <script>
 export default {
-    name: 'MnAlert',
     props: {
         title: {
             type: String,

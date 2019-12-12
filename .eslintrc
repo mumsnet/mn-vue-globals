@@ -1,0 +1,81 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "extends": [
+        "plugin:vue/recommended"
+    ],
+    "rules": {
+        // Error rules
+        "no-cond-assign": 2,
+        "no-constant-condition": 2,
+        "no-control-regex": 2,
+        "no-debugger": 2,
+        "no-dupe-args": 2,
+        "no-dupe-keys": 2,
+        "no-duplicate-case": 2,
+        "no-empty": 2,
+        "no-empty-character-class": 2,
+        "no-ex-assign": 2,
+        "no-extra-boolean-cast": 2,
+        "no-extra-parens": 1,
+        "no-extra-semi": 2,
+        "no-func-assign": 2,
+        "no-inner-declarations": 2,
+        "no-invalid-regexp": 2,
+        "no-irregular-whitespace": 2,
+        "no-misleading-character-class": 2,
+        "no-obj-calls": 2,
+        "no-prototype-builtins": 2,
+        "no-regex-spaces": 2,
+        "no-sparse-arrays": 2,
+        "no-unexpected-multiline": 2,
+        "no-unreachable": 2,
+        "no-unsafe-finally": 2,
+        "no-unsafe-negation": 2,
+        "require-atomic-updates": 2,
+        "use-isnan": 2,
+        "valid-typeof": 2,
+        // Best practice rules
+        "curly": 2,
+        "eqeqeq": 0,
+        "no-case-declarations": 2,
+        "no-empty-pattern": 2,
+        "no-eval": 2,
+        "no-fallthrough": 2,
+        "no-global-assign": 2,
+        "no-octal": 2,
+        "no-redeclare": 2,
+        "no-self-assign": 2,
+        "no-useless-catch": 2,
+        "no-useless-escape": 2,
+        "no-with": 2,
+        "no-delete-var": 2,
+        "no-shadow-restricted-names": 2,
+        "no-undef": 0,
+        "no-unused-vars": 1,
+        // Stylistic rules
+        "no-mixed-spaces-and-tabs": 2,
+        "camelcase": 2,
+        "semi": 2,
+        "indent": 2,
+        // ES6 rules
+        "constructor-super": 2,
+        "no-class-assign": 2,
+        "no-const-assign": 2,
+        "no-dupe-class-members": 2,
+        "no-new-symbol": 2,
+        "no-this-before-super": 2,
+        "require-yield": 2,
+        // Vue rules
+        "vue/html-indent": ["error", 4],
+        "vue/script-indent": ["error", 4, {
+            "baseIndent": 0
+        }]
+    }
+}

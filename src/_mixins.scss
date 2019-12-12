@@ -1,0 +1,59 @@
+@mixin center-triangle {
+    left: 0;
+    right: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+@mixin standard-triangle(
+    $width: 5px,
+    $rotate: 0deg,
+    $color: $body-text-color,
+    $color-2: $body-text-color,
+    $top: auto,
+    $right: auto,
+    $bottom: auto,
+    $left: auto,
+    $center: false,
+    $arrow-border: false) {
+    position: relative;
+
+    &::before,
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        position: absolute;
+        border: $width solid transparent;
+        transform: rotate($rotate);
+        @if ($arrow-border == true) {
+            top: $top;
+            border-top: 0;
+            border-bottom-color: $color-2;
+        }
+    }
+
+    @if ($arrow-border == true) {
+        &::before {
+            position: absolute;
+            top: calc(#{$top} - 1px);
+            left: $left;
+            right: $right;
+            bottom: $bottom;
+            z-index: 2;
+        }
+    }
+
+    &::after {
+        border-bottom-color: $color;
+        position: absolute;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+        z-index: 1;
+        @if ($center == true) {
+            @include center-triangle;
+        }
+    }
+}

@@ -46,7 +46,6 @@
 
 <script>
 export default {
-    name: 'MnLoadSpinner',
     props: {
         color: {
             type: String,

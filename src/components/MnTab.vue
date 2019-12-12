@@ -6,7 +6,6 @@
 
 <script>
 export default {
-    name: 'MnTab',
     props: {
         name: {
             type: String,

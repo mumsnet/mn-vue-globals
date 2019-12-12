@@ -20,7 +20,6 @@
 
 <script>
 export default {
-    name: 'MnTab',
     props: {
         orientation: {
             type: String,

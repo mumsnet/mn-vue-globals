@@ -4,6 +4,6 @@
 
 <script>
 export default {
-    name: 'mn-vue-globals-app',
+    name: 'MnVueGlobalsApp',
 };
 </script>

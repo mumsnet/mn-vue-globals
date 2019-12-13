@@ -7,8 +7,16 @@ import MnLoadSpinner from './MnLoadSpinner.vue';
 import MnTab from './MnTab.vue';
 import MnTabs from './MnTabs.vue';
 
+Vue.component(MnAlert, 'MnAlert');
+Vue.component(MnModal, 'MnModal');
+Vue.component(MnModal, 'MnModal');
+Vue.component(MnActionModal, 'MnActionModal');
+Vue.component(MnContextModal, 'MnContextModal');
+Vue.component(MnLoadSpinner, 'MnLoadSpinner');
+Vue.component(MnTab, 'MnTab');
+Vue.component(MnTabs, 'MnTabs');
 
-const Components = {
+export {
     MnAlert,
     MnModal,
     MnActionModal,
@@ -17,9 +25,3 @@ const Components = {
     MnTab,
     MnTabs
 };
-
-Object.keys(Components).forEach(name => {
-    Vue.component(name, Components[name]);
-});
-
-export default Components;

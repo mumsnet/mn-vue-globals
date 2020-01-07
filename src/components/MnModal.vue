@@ -8,6 +8,7 @@
             <div
                 :class="containerClass"
                 @click.stop
+                v-scroll-lock="scrollLockOnOpen"
             >
                 <slot />
             </div>
@@ -19,6 +20,10 @@
 export default {
     props: {
         show: Boolean,
+        scrollLock: {
+            type: Boolean,
+            default: true
+        },
         containerClass: {
             type: String,
             default() {
@@ -30,6 +35,11 @@ export default {
         return {
             showModal: false
         };
+    },
+    computed: {
+        scrollLockOnOpen() {
+            return this.show && this.scrollLock;
+        }
     },
     mounted() {
         document.addEventListener('keydown', (e) => {
@@ -55,6 +65,7 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
+        overflow-y: auto;
         background-color: rgba(0, 0, 0, .5);
         transition: opacity .3s ease;
         z-index: 40;

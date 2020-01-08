@@ -6,9 +6,9 @@
             @click="close"
         >
             <div
+                v-scroll-lock="scrollLockOnOpen"
                 :class="containerClass"
                 @click.stop
-                v-scroll-lock="scrollLockOnOpen"
             >
                 <slot />
             </div>
@@ -74,14 +74,14 @@ export default {
     .modal-container-responsive {
         position: relative;
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         padding: 20px 30px;
         background-color: #fff;
         transition: all .3s ease;
 
         @media (min-width: $min-width-lg) {
             width: 800px;
-            height: auto;
+            min-height: 0;
             margin: 40px auto;
             border-radius: 2px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, .33);

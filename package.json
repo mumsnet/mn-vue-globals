@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "core-js": "^3.4.8",
-    "v-scroll-lock": "^1.1.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {

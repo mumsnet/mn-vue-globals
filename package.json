@@ -1,7 +1,7 @@
 {
   "name": "mn-vue-globals",
   "main": "./dist/mn-vue-globals.common.js",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

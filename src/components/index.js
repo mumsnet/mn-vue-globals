@@ -6,6 +6,7 @@ import MnContextModal from './MnContextModal.vue';
 import MnLoadSpinner from './MnLoadSpinner.vue';
 import MnTab from './MnTab.vue';
 import MnTabs from './MnTabs.vue';
+import MnInputPassword from './MnInputPassword.vue';
 
 
 const Components = {
@@ -15,7 +16,8 @@ const Components = {
     MnContextModal,
     MnLoadSpinner,
     MnTab,
-    MnTabs
+    MnTabs,
+    MnInputPassword
 };
 
 Object.keys(Components).forEach(name => {

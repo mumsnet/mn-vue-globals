@@ -24,6 +24,7 @@
             >
 
             <button
+                v-if="showVisibilityIcon"
                 class="input-visible-icon"
                 @click.prevent="passwordVisibility"
             >
@@ -105,6 +106,10 @@ export default {
         labelClass: {
             type: String,
             default: 'sr-only'
+        },
+        showVisibilityIcon: {
+            type: Boolean,
+            default: true
         }
     },
     data() {

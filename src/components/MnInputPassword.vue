@@ -180,13 +180,13 @@ export default {
         /* eslint-disable */
         mediumRegex(string) {
             // Medium password rules: one lowercase character, one uppercase character, one numeric character, one special character, min 8 characters
-            const mediumRegex = new RegExp("^((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]))(?=.*[!@#\$%\^&\*])(?=.{8,})");
-            return mediumRegex.test(string);
+            const regEx = new RegExp("^((?=.*[a-z])(?=.*[A-Z0-9!@#\$%\^&\*\?]))(?=.{8,})");
+            return regEx.test(string);
         },
         strongRegex(string) {
             // Strong password rules: two lowercase characters, two uppercase characters, two numeric characters, two special characters, min 8 characters
-            const strongRegex = new RegExp("^((?=.*[a-z])(?=.*[A-Z].*[A-Z])(?=.*[0-9].*[0-9]))(?=.*[!@#\$%\^&\*].*[.*[!@#\$%\^&\*])(?=.{8,})");
-            return strongRegex.test(string);
+            const regEx = new RegExp("^((?=.*[a-z])(?=.*[A-Z0-9!@#\$%\^&\*\?]{2}))(?=.{8,})");
+            return regEx.test(string);
         },
     },
 };

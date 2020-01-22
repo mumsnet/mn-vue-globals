@@ -36,43 +36,43 @@
         </div>
 
         <div
-            v-if="formSubmitClicked && !v.required"
-            class="validation-text"
+            v-if="!passwordHint && formSubmitClicked && !v.required"
+            class="validation-text position-absolute"
         >
             Password is required
         </div>
 
         <div
             v-if="passwordHint"
-            class="validation-text validation-text--muted"
+            class="validation-text validation-text--muted position-absolute"
         >
             {{ v.$params.minLength.min }} characters or more
         </div>
 
         <div
             v-if="!passwordHint && !v.minLength"
-            class="validation-text"
+            class="validation-text position-absolute"
         >
             Call that a password? {{ v.$params.minLength.min }} characters or more please
         </div>
 
         <div
             v-if="!passwordHint && passwordWeak"
-            class="validation-text validation-text--warning"
+            class="validation-text validation-text--warning position-absolute"
         >
             Not the best password, but it will do
         </div>
 
         <div
             v-if="passwordMedium"
-            class="validation-text validation-text--warning"
+            class="validation-text validation-text--warning position-absolute"
         >
             Not bad&hellip;
         </div>
 
         <div
             v-if="passwordStrong"
-            class="validation-text validation-text--success"
+            class="validation-text validation-text--success position-absolute"
         >
             Lovely job!
         </div>

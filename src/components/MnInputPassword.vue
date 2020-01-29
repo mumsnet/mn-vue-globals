@@ -16,6 +16,7 @@
                 :type="fieldType"
                 :value="value"
                 :placeholder="inputPlaceholder"
+                autocomplete="new-password"
                 class="form-control"
                 @focus="passwordFocus"
                 @blur="passwordBlur"

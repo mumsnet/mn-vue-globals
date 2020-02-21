@@ -7,7 +7,7 @@
             :for="inputId"
             :class="labelClass"
         >
-            {{ inputPlaceholder }}
+            {{ labelText }}
         </label>
 
         <div class="w-100 position-relative">
@@ -15,7 +15,7 @@
                 :id="inputId"
                 :type="fieldType"
                 :value="value"
-                :placeholder="inputPlaceholder"
+                :placeholder="placeholderText"
                 autocomplete="new-password"
                 class="form-control"
                 @focus="passwordFocus"
@@ -100,13 +100,17 @@ export default {
             type: String,
             required: true
         },
-        inputPlaceholder: {
+        labelText: {
+            type: String,
+            default: 'Password'
+        },
+        placeholderText: {
             type: String,
             default: 'Enter your password'
         },
         labelClass: {
             type: String,
-            default: 'sr-only'
+            default: 'text-small'
         },
         showVisibilityIcon: {
             type: Boolean,

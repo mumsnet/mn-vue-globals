@@ -22,6 +22,7 @@
                 @blur="passwordBlur"
                 @input="passwordInput"
                 @keypress.enter.prevent="handleEnter"
+                @paste="passwordHint = false"
             >
 
             <button

@@ -22,7 +22,6 @@
                 @blur="passwordBlur"
                 @input="passwordInput"
                 @keypress.enter.prevent="handleEnter"
-                @paste="passwordHint = false"
             >
 
             <button
@@ -66,14 +65,14 @@
         </div>
 
         <div
-            v-if="passwordMedium"
+            v-if="!passwordHint && passwordMedium"
             class="validation-text validation-text--warning position-absolute"
         >
             Not bad&hellip;
         </div>
 
         <div
-            v-if="passwordStrong"
+            v-if="!passwordHint && passwordStrong"
             class="validation-text validation-text--success position-absolute"
         >
             Lovely job!

@@ -8,6 +8,7 @@ import MnTab from './MnTab.vue';
 import MnTabs from './MnTabs.vue';
 import MnInputPassword from './MnInputPassword.vue';
 import MnInput from './MnInput.vue';
+import MnContentBlock from './MnContentBlock.vue';
 
 
 const Components = {
@@ -19,7 +20,8 @@ const Components = {
     MnTab,
     MnTabs,
     MnInputPassword,
-    MnInput
+    MnInput,
+    MnContentBlock
 };
 
 Object.keys(Components).forEach(name => {

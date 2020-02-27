@@ -1,19 +1,20 @@
 <template>
     <div>
         <label
-            v-if="label"
+            v-if="labelText"
             :class="labelClass"
             :for="id"
         >
-            {{ label }}
+            {{ labelText }}
         </label>
 
         <input
             :id="id"
-            :type="inputType"
+            :type="fieldType"
             :value="value"
             v-bind="$attrs"
             :class="inputClass"
+            :placeholder="placeholderText"
             @blur="updateValue"
         >
 
@@ -30,13 +31,13 @@ export default {
             type: String,
             default: ''
         },
-        label: {
+        labelText: {
             type: String,
             default: ''
         },
         labelClass: {
             type: String,
-            default: ''
+            default: 'text-small'
         },
         showLabel: {
             type: Boolean,
@@ -46,9 +47,13 @@ export default {
             type: String,
             default: 'form-control'
         },
-        inputType: {
+        fieldType: {
             type: String,
             default: 'text'
+        },
+        placeholderText: {
+            type: String,
+            default: ''
         }
     },
     methods: {

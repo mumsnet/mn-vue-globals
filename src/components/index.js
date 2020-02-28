@@ -9,6 +9,7 @@ import MnTabs from './MnTabs.vue';
 import MnInputPassword from './MnInputPassword.vue';
 import MnInput from './MnInput.vue';
 import MnContentBlock from './MnContentBlock.vue';
+import helpers from '../helpers';
 
 
 const Components = {
@@ -28,4 +29,7 @@ Object.keys(Components).forEach(name => {
     Vue.component(name, Components[name]);
 });
 
-export default Components;
+export {
+    Components,
+    helpers
+};

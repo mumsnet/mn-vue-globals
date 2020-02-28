@@ -18,7 +18,10 @@
             </span>
 
             <div>
-                <p class="h5">
+                <p
+                    v-if="title.length > 0"
+                    class="h5"
+                >
                     {{ title }}
                 </p>
 

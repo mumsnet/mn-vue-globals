@@ -8,6 +8,7 @@ import MnTab from './MnTab.vue';
 import MnTabs from './MnTabs.vue';
 import MnInputPassword from './MnInputPassword.vue';
 import MnInput from './MnInput.vue';
+import MnInputCheckbox from './MnInputCheckbox.vue';
 import MnContentBlock from './MnContentBlock.vue';
 import helpers from '../helpers';
 
@@ -22,6 +23,7 @@ const Components = {
     MnTabs,
     MnInputPassword,
     MnInput,
+    MnInputCheckbox,
     MnContentBlock
 };
 

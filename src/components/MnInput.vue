@@ -15,6 +15,7 @@
             v-bind="$attrs"
             :class="inputClass"
             :placeholder="placeholderText"
+            :autocomplete="autocomplete"
             @blur="updateValue"
         >
 
@@ -54,6 +55,10 @@ export default {
         placeholderText: {
             type: String,
             default: ''
+        },
+        autocomplete: {
+            type: String,
+            default: 'on'
         }
     },
     methods: {

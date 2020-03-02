@@ -59,6 +59,11 @@ const helpers = {
     prepareId(str) {
         // Remove spaces and set to lower case
         return str.replace(/\s+/g, '-').toLowerCase();
+    },
+    updateRadioOption(state, e) {
+        this[state].forEach((item, i) => {
+            this[state][i].selected = item.name === e.target.value;
+        });
     }
 };
 

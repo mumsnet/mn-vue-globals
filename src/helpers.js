@@ -55,6 +55,10 @@ const helpers = {
     },
     birthDateEntered(c) {
         return (c.birthDay.length > 0 || c.birthMonth.length > 0 || c.birthYear.length > 0);
+    },
+    prepareId(str) {
+        // Remove spaces and set to lower case
+        return str.replace(/\s+/g, '-').toLowerCase();
     }
 };
 

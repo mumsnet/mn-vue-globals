@@ -32,6 +32,13 @@ const helpers = {
             return 0;
         }
     },
+    numberToBool(val) {
+        if (val.length === 0 || Number(val) === 0) {
+            return false;
+        } else {
+            return true;
+        }
+    },
     checkDueDate(date) {
         const val = dayjs(this.formatDate(date)).$d;
         const now = dayjs();
@@ -60,9 +67,9 @@ const helpers = {
         // Remove spaces and set to lower case
         return str.replace(/\s+/g, '-').toLowerCase();
     },
-    updateRadioOption(state, e) {
+    updateRadioOption(state, property, val) {
         this[state].forEach((item, i) => {
-            this[state][i].selected = item.name === e.target.value;
+            this[state][i].selected = item[property] === val;
         });
     }
 };

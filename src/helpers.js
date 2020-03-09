@@ -39,6 +39,20 @@ const helpers = {
             return true;
         }
     },
+    stringToBool(val) {
+        if (val === 'false') {
+            return false;
+        } else {
+            return true;
+        }
+    },
+    boolToString(val) {
+        if (val === false) {
+            return 'false';
+        } else {
+            return 'true';
+        }
+    },
     checkDueDate(date) {
         const val = dayjs(this.formatDate(date)).$d;
         const now = dayjs();
